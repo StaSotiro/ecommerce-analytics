@@ -1,0 +1,14 @@
+ecommerce_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      dbname: postgres  # Replace with your database name
+      schema: develop  # Replace with your schema if different
+      host: localhost  # Replace with your server hostname or IP
+      port: 5432  # Default postgres HTTP port
+      user: postgres  # Replace with your postgres username
+      password: mysecretpassword  # Replace with your postgres password
+      connect_timeout: 10
+      threads: 1
+      # search_path: "$user, yourschema" # Default is "$user, public" meaning dbt will search in the public schema for your unreferenced tables
